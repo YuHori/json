@@ -3,7 +3,8 @@
 
 import json
 from collections import OrderedDict
-from pytablewriter import UnicodeTableWriter
+from pytablewriter import MarkdownTableWriter
+
 
 def main():
     bible_json = read_json('bible_jp.json')
@@ -33,7 +34,7 @@ def create_summary(bible_json):
 
 def show_table(all_array_list):
     """ テーブルを表示 """
-    writer = UnicodeTableWriter()
+    writer = MarkdownTableWriter()
     writer.table_name = "聖書"
     writer.headers = ["旧約/新約", "書簡名", "章数", "節数"]
     writer.value_matrix = all_array_list
