@@ -36,7 +36,7 @@ def show_table(all_array_list):
     """ テーブルを表示 """
     writer = MarkdownTableWriter()
     writer.table_name = "聖書"
-    writer.headers = ["旧約/新約", "書簡名", "章数", "節数"]
+    writer.headers = ["旧約/新約", "書簡名", "章", "節数"]
     writer.value_matrix = all_array_list
     writer.write_table()
 
